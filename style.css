@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+
+    --veryDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+
+    --font-family: "Poppins", sans-serif;
+
+    --fs-body: 0.9275rem;
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.25rem;
+    
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* never skip header levels */
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  color: var(--veryDarkBlue);
+  margin-bottom: 1rem;
+}
+
+
+/* General layout */
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--fs-body);
+    color: var(--grayishBlue);
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.wrapper--narrow {
+    max-width: 550px;
+}
+
+header {
+    text-align: center;
+    margin-block: 5rem;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h1 span {
+    font-weight: var(--fw-200);
+}
+
+
+.layout-grid {
+    --gap: 2rem;
+
+    display: grid;
+    gap: var(--gap); 
+
+}
+
+@media (min-width: 900px) {
+    .layout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.layout-grid > * {
+    flex: 1;
+}
+
+.col {
+    display: grid;
+    align-content: center;
+    gap: var(--gap);
+}
+
+.card {
+    padding: 2rem;
+    border-top: 0.35rem solid;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.75rem 1rem -0.5rem rgb(0, 0, 0, 0.2)
+}
+
+.card__title {
+    font-size: var(--fs-h2);
+    margin: 0;
+}
+
+/* push something from one side to the other */
+
+.card__img {
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+
+}
+
+.border-cyan {
+    border-color: var(--cyan);
+}
+
+.border-red {
+    border-color: var(--red);
+}
+
+.border-blue {
+    border-color: blue;
+
+}
+
+.border-orange {
+    border-color: var(--orange);
+}
